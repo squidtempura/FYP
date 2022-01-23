@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class playerHealth : MonoBehaviour
 {
+    public int health;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,14 @@ public class playerHealth : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void DamagePlayer(int damage)
+    {
+        health -= damage;
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
