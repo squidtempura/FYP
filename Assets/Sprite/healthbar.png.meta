@@ -109,9 +109,9 @@ TextureImporter:
       name: healthbar_0
       rect:
         serializedVersion: 2
-        x: 6
+        x: 5
         y: 22
-        width: 212
+        width: 214
         height: 5
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
