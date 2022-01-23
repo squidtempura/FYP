@@ -48,10 +48,11 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\script\playercontroller.cs" />
+     <Compile Include="Assets\script\HealthBar.cs" />
+     <Compile Include="Assets\script\playerHealth.cs" />
      <Compile Include="Assets\script\MainMenu.cs" />
      <Compile Include="Assets\script\CameraFollow.cs" />
-     <Compile Include="Assets\script\playerHealth.cs" />
-     <Compile Include="Assets\script\HealthBar.cs" />
+     <Compile Include="Assets\script\Spike.cs" />
  <Reference Include="UnityEngine">
  <HintPath>D:/UNITY/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
