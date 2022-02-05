@@ -26,6 +26,7 @@ public class playercontroller : MonoBehaviour
         Walk();
         Flip();
         Jump();
+        Shoot();
         CheckOnGround();
         SwitchAnimation();
     }
@@ -78,6 +79,14 @@ public class playercontroller : MonoBehaviour
                     canDoubleJump = false;
                 }
             }
+        }
+    }
+
+    void Shoot()
+    {
+        if(Input.GetButtonDown("shoot"))
+        {
+            playerAnim.SetTrigger("shoot");
         }
     }
 
