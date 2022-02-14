@@ -103,7 +103,8 @@ public class playercontroller : MonoBehaviour
     void CheckOnGround()
     {
         //check if the collider of characters feet is touching ground layer
-        isOnGround = playerFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
+        isOnGround = playerFeet.IsTouchingLayers(LayerMask.GetMask("Ground"))||
+                     playerFeet.IsTouchingLayers(LayerMask.GetMask("MovingPlatform"));
         
     }
 
