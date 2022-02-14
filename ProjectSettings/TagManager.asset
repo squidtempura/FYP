@@ -17,7 +17,7 @@ TagManager:
   - Spike
   - Player
   - Enemy
-  - 
+  - TriggerBox
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 987410165
+    locked: 0
+  - name: Item
+    uniqueID: 2076914933
     locked: 0
