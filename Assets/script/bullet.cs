@@ -39,7 +39,8 @@ public class bullet : MonoBehaviour
                 //destroy bullet object
                 Destroy(gameObject); 
                 //bullet causes damage to enemy
-                other.GetComponent<Enemy>().TakeDamage(damage);
+                //other.GetComponent<Enemy>().TakeDamage(damage);
+                other.GetComponent<GreenSlime>().TakeDamage(damage);
             }
         }
 }
