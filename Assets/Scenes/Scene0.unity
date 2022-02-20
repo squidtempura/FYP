@@ -391,7 +391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225793558}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 2.05, z: 0}
+  m_LocalPosition: {x: -0.08, y: 2.05, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1371599029}
@@ -413,7 +413,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 149c782b780277c46b039ec742261e36, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -7589,7 +7589,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 863072133}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 149c782b780277c46b039ec742261e36, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -9387,6 +9387,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2327605860090872087, guid: 95056358010dbb049b2a74bdc1841f96, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 149c782b780277c46b039ec742261e36, type: 2}
     - target: {fileID: 2327605860525797522, guid: 95056358010dbb049b2a74bdc1841f96, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -10025,6 +10029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlatform2Group
       objectReference: {fileID: 0}
+    - target: {fileID: 4219388947018627135, guid: fafe41244c858aa4ea35c065a71c47f0, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 149c782b780277c46b039ec742261e36, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fafe41244c858aa4ea35c065a71c47f0, type: 3}
 --- !u!1001 &4560144958936890457
