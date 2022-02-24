@@ -48,10 +48,9 @@
      <Compile Include="Assets\script\MovingPlatform2.cs" />
      <Compile Include="Assets\script\Coin.cs" />
      <Compile Include="Assets\script\bullet.cs" />
-     <Compile Include="Assets\script\playerHealth.cs" />
      <Compile Include="Assets\script\MainMenu.cs" />
      <Compile Include="Assets\script\CameraFollow.cs" />
-     <Compile Include="Assets\script\Enemy.cs" />
+     <Compile Include="Assets\script\PlayerHealth.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/UNITY/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

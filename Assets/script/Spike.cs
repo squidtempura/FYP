@@ -5,11 +5,11 @@ using UnityEngine;
 public class Spike : MonoBehaviour
 {
     public int damage;
-    private playerHealth playerHealth;
+    private PlayerHealth playerHealth;
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>();
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
