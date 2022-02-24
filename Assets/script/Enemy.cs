@@ -6,11 +6,12 @@ public abstract class Enemy : MonoBehaviour
 {
     public int health;
     public int damage;
-    private playerHealth playerHealth;
+    private playerHealth pHealth;
+    public GameObject dropCoin; 
     // Start is called before the first frame update
     public void Start()
     {
-        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>();
+        pHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>();
     }
 
     // Update is called once per frame
@@ -18,6 +19,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if(health <= 0)
         {
+            Instantiate(dropCoin, transform.position,Quaternion.identity);
             Destroy(gameObject);
         }
     }
@@ -30,9 +32,12 @@ public abstract class Enemy : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) 
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D" )
         {
-            playerHealth.DamagePlayer(damage);
+            if(pHealth != null)
+            {
+                pHealth.DamagePlayer(damage);
+            }
         }
     }
 }

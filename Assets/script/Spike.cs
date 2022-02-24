@@ -10,7 +10,6 @@ public class Spike : MonoBehaviour
     void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<playerHealth>();
-
     }
 
     // Update is called once per frame

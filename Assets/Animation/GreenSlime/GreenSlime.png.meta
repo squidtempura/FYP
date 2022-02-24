@@ -32,6 +32,18 @@ TextureImporter:
   - first:
       213: 1716482015228993432
     second: GreenSlime_9
+  - first:
+      213: 440734978823021610
+    second: GreenSlime_10
+  - first:
+      213: 8676588886384998731
+    second: GreenSlime_11
+  - first:
+      213: -6728088728372849589
+    second: GreenSlime_12
+  - first:
+      213: -5829030762072236172
+    second: GreenSlime_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -338,6 +350,90 @@ TextureImporter:
       bones: []
       spriteID: 89f121d6c4b22d710800000000000000
       internalID: 1716482015228993432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenSlime_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a24e5dcc02ecd1600800000000000000
+      internalID: 440734978823021610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenSlime_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4974132f9f696870800000000000000
+      internalID: 8676588886384998731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenSlime_12
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44d600d2f601a2a0800000000000000
+      internalID: -6728088728372849589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GreenSlime_13
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f1cd9c76f1b1fa0800000000000000
+      internalID: -5829030762072236172
       vertices: []
       indices: 
       edges: []

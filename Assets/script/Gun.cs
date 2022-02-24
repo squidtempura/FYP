@@ -30,7 +30,6 @@ public class Gun : MonoBehaviour
         //if user clicks mouse
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("1");
             //generate a bullet and rotate the same angle as the muzzle
             Instantiate(bullet, muzzleTransform.position,Quaternion.Euler(transform.eulerAngles));
         }
