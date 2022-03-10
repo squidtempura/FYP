@@ -5,42 +5,54 @@ public class Gun : MonoBehaviour
 
     public GameObject bullet;
     public Transform muzzleTransform;
+    public Transform gunTransform;
     public Camera cam;
     private Vector3 mousePos;
     private Vector2 gunDirection;
 
+    public bool isEquipped;
+    public Transform WeaponHolderTransform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        isEquipped = false;
+        WeaponHolderTransform = GameObject.Find("WeaponHolder").GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //detect the coordinates of where player clicks
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        //get the direction of the vector
-        gunDirection = (mousePos - transform.position).normalized;
-        //calculate the angle of rotation
-        float angle = Mathf.Atan2(gunDirection.y,gunDirection.x)*Mathf.Rad2Deg;
-        //make object rotate according to the angle
-        transform.eulerAngles = new Vector3(0,0,angle);
+        if(WeaponHolderTransform.position==gunTransform.position)
+        {
+            isEquipped = true;
+            if(isEquipped)
+            {
+                //detect the coordinates of where player clicks
+                mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+                //get the direction of the vector
+                gunDirection = (mousePos - transform.position).normalized;
+                //calculate the angle of rotation
+                float angle = Mathf.Atan2(gunDirection.y,gunDirection.x)*Mathf.Rad2Deg;
+                //make object rotate according to the angle
+                transform.eulerAngles = new Vector3(0,0,angle);
 
-        if(Mathf.Abs(angle) > 90 && transform.localScale.y > 0)
-        {
-            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y,transform.localScale.z);
-        }
-        else if(Mathf.Abs(angle) < 90 && transform.localScale.y < 0)
-        {
-            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y,transform.localScale.z);
-        }
+                if(Mathf.Abs(angle) > 90 && transform.localScale.y > 0)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y,transform.localScale.z);
+                }
+                else if(Mathf.Abs(angle) < 90 && transform.localScale.y < 0)
+                {
+                    transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y,transform.localScale.z);
+                }
 
-        //if user clicks mouse
-        if(Input.GetMouseButtonDown(0))
-        {
-            //generate a bullet and rotate the same angle as the muzzle
-            Instantiate(bullet, muzzleTransform.position,Quaternion.Euler(transform.eulerAngles));
+                //if user clicks mouse
+                if(Input.GetMouseButtonDown(0))
+                {
+                    //generate a bullet and rotate the same angle as the muzzle
+                    Instantiate(bullet, muzzleTransform.position,Quaternion.Euler(transform.eulerAngles));
+                }
+            }
         }
     }
 

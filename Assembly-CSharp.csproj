@@ -39,10 +39,12 @@
      <Compile Include="Assets\script\GreenSlime.cs" />
      <Compile Include="Assets\script\playercontroller.cs" />
      <Compile Include="Assets\script\Gun.cs" />
+     <Compile Include="Assets\script\bullet2.cs" />
      <Compile Include="Assets\script\PlayerHealth.cs" />
      <Compile Include="Assets\script\EnemyBehaviour.cs" />
      <Compile Include="Assets\script\HealthBar.cs" />
      <Compile Include="Assets\script\Spike.cs" />
+     <Compile Include="Assets\script\WeaponSwitch.cs" />
      <Compile Include="Assets\script\MovingPlatform1.cs" />
      <Compile Include="Assets\script\GameManager.cs" />
      <Compile Include="Assets\script\playerAttack.cs" />
@@ -54,8 +56,7 @@
      <Compile Include="Assets\script\MainMenu.cs" />
      <Compile Include="Assets\script\CameraFollow.cs" />
      <Compile Include="Assets\script\PickUp.cs" />
-     <Compile Include="Assets\script\bullet2.cs" />
-     <Compile Include="Assets\script\WeaponSwitch.cs" />
+     <Compile Include="Assets\script\GunPickUp.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/UNITY/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

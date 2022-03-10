@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Detection
   - item
+  - Gun
   layers:
   - Default
   - TransparentFX
