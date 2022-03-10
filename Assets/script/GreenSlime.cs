@@ -33,7 +33,6 @@ public class GreenSlime : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CapsuleCollider2D")
         {
-            Debug.Log(playerHealth);
             if(playerHealth != null)
             {
                 playerHealth.DamagePlayer(damage);

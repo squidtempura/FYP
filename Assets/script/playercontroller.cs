@@ -5,13 +5,20 @@ using UnityEngine;
 public class playercontroller : MonoBehaviour
 {
     public float walkspeed;
+    public float runspeed;
     public float jumpspeed;
+    public float slidespeed;
     public float doublejumpspeed;
     public bool isOnGround; 
     public bool canDoubleJump;
     private Rigidbody2D playerRigidbody;
     private BoxCollider2D playerFeet;
+    private PolygonCollider2D pc2D;
+    private CapsuleCollider2D cc2D;
     private Animator playerAnim;
+
+    public float time;
+    public float startTime;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,21 +26,28 @@ public class playercontroller : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
         playerFeet = GetComponent<BoxCollider2D>();
+        pc2D = GetComponent<PolygonCollider2D>();
+        cc2D = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         Walk();
+        Run();
+        Slide();
         Flip();
         Jump();
         
         CheckOnGround();
+
         SwitchAnimation();
     }
 
     void Walk()
     {
+        playerAnim.SetBool("isrun",false);
+        playerAnim.SetBool("isslide",false);
         //get user input
         float moveDir = Input.GetAxis("Horizontal");
         //calculate velocity value of player, has speed in x direction, 0 in y direction
@@ -44,6 +58,61 @@ public class playercontroller : MonoBehaviour
         bool playerHasXAxisSpeed = Mathf.Abs(playerRigidbody.velocity.x) > 0;
         //if it is true, update character state to iswalk
         playerAnim.SetBool("iswalk",playerHasXAxisSpeed);
+    }
+
+    void Run()
+    {
+        //boolean variable to detect player has speed in x direction
+        bool playerHasXAxisSpeed = Mathf.Abs(playerRigidbody.velocity.x) > 0;
+        if(playerAnim.GetBool("iswalk") && !playerAnim.GetBool("isjump") && !playerAnim.GetBool("isfall"))
+        {
+            if(Input.GetKey(KeyCode.LeftShift))
+            {
+                //get user input
+                float moveDir = Input.GetAxis("Horizontal");
+                //calculate velocity value of player, has speed in x direction, 0 in y direction
+                Vector2 playerVel = new Vector2(moveDir*runspeed,playerRigidbody.velocity.y);
+                //assign value to the velocity attribute
+                playerRigidbody.velocity = playerVel;
+                //if it is true, update character state to iswalk
+                playerAnim.SetBool("isrun",playerHasXAxisSpeed);
+            }
+        }
+    }
+
+    void Slide()
+    {
+        //boolean variable to detect player has speed in x direction
+        bool playerHasXAxisSpeed = Mathf.Abs(playerRigidbody.velocity.x) > 0;
+        if(playerAnim.GetBool("iswalk") && !playerAnim.GetBool("isjump") && !playerAnim.GetBool("isfall"))
+        {
+            if(Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                pc2D.enabled = false;
+                cc2D.enabled = false;
+                //if it is true, update character state to iswalk 
+                playerAnim.SetBool("isslide",true);
+                walkspeed = slidespeed;
+                StartCoroutine(startSlide());
+            }
+        }
+    }
+
+    IEnumerator startSlide()
+    {
+        yield return new WaitForSeconds(startTime);
+        pc2D.enabled = false;
+        cc2D.enabled = false;
+        walkspeed = slidespeed;
+        StartCoroutine(disableHitBox());
+    }
+
+    IEnumerator disableHitBox()
+    {
+        yield return new WaitForSeconds(time);
+        pc2D.enabled = true;
+        cc2D.enabled = true;
+        walkspeed = 8;
     }
 
     void Flip()
@@ -108,6 +177,12 @@ public class playercontroller : MonoBehaviour
         
     }
 
+    void resetCollider()
+    {
+        pc2D.enabled = true;
+        cc2D.enabled = true;
+    }
+
     // play different animation according to the character state
     void SwitchAnimation()
     { 
@@ -116,6 +191,7 @@ public class playercontroller : MonoBehaviour
         // if is jumping
         if(playerAnim.GetBool("isjump"))
         {
+            playerAnim.SetBool("iswalk",false);
             // if speed of y direction is less than 0
             if(playerRigidbody.velocity.y < 0.0f)
             {
@@ -149,5 +225,13 @@ public class playercontroller : MonoBehaviour
             playerAnim.SetBool("doublefall",false);
             playerAnim.SetBool("isidle",true);
         }
+
+        if(!isOnGround)
+        {
+            playerAnim.SetBool("iswalk",false);
+            playerAnim.SetBool("isidle",false);
+        }
+
+
     }
 }

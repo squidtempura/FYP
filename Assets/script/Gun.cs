@@ -27,6 +27,15 @@ public class Gun : MonoBehaviour
         //make object rotate according to the angle
         transform.eulerAngles = new Vector3(0,0,angle);
 
+        if(Mathf.Abs(angle) > 90 && transform.localScale.y > 0)
+        {
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y,transform.localScale.z);
+        }
+        else if(Mathf.Abs(angle) < 90 && transform.localScale.y < 0)
+        {
+            transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y,transform.localScale.z);
+        }
+
         //if user clicks mouse
         if(Input.GetMouseButtonDown(0))
         {

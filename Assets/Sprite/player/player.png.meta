@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7eb7bbbe76877c6419c05a7b47d67f03
+guid: 1c84a5a1dbd54694b887c8685ff17f00
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -71,6 +71,9 @@ TextureImporter:
   - first:
       213: 6581797731665330364
     second: player_22
+  - first:
+      213: -735806604810280217
+    second: player_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -650,6 +653,27 @@ TextureImporter:
       bones: []
       spriteID: cb042634a2e375b50800000000000000
       internalID: 6581797731665330364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_23
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2a5e89ac3e9c5f0800000000000000
+      internalID: -735806604810280217
       vertices: []
       indices: 
       edges: []
