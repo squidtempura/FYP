@@ -54,6 +54,8 @@
      <Compile Include="Assets\script\MainMenu.cs" />
      <Compile Include="Assets\script\CameraFollow.cs" />
      <Compile Include="Assets\script\PickUp.cs" />
+     <Compile Include="Assets\script\bullet2.cs" />
+     <Compile Include="Assets\script\WeaponSwitch.cs" />
     <Reference Include="UnityEngine">
         <HintPath>D:/UNITY/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
