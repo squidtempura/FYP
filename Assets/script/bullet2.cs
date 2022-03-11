@@ -24,6 +24,7 @@ public class bullet2 : MonoBehaviour
     {
         //bullet that exceed the range will be destroyed
         float distance = (transform.position- startPos).sqrMagnitude;
+        Debug.Log(distance);
         if(distance > destroyDistance)
         {
             Destroy(gameObject); 

@@ -59,4 +59,9 @@ public class WeaponSwitch : MonoBehaviour
             i ++;
         }
     }
+
+    void showWeapon()
+    {
+
+    }
 }

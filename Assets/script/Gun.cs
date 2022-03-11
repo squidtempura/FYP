@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
 
     public bool isEquipped;
     public Transform WeaponHolderTransform;
+    public GameObject GunName;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,7 @@ public class Gun : MonoBehaviour
         if(WeaponHolderTransform.position==gunTransform.position)
         {
             isEquipped = true;
+            string gunName = GunName.name;
             if(isEquipped)
             {
                 //detect the coordinates of where player clicks
@@ -47,7 +49,12 @@ public class Gun : MonoBehaviour
                 }
 
                 //if user clicks mouse
-                if(Input.GetMouseButtonDown(0))
+                if(Input.GetMouseButtonDown(0) && gunName == "WheelGun")
+                {
+                    //generate a bullet and rotate the same angle as the muzzle
+                    Instantiate(bullet, muzzleTransform.position,Quaternion.Euler(transform.eulerAngles));
+                }
+                else if(Input.GetMouseButton(0) && gunName == "GatlinGun")
                 {
                     //generate a bullet and rotate the same angle as the muzzle
                     Instantiate(bullet, muzzleTransform.position,Quaternion.Euler(transform.eulerAngles));
