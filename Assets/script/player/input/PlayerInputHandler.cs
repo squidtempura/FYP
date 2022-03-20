@@ -10,6 +10,8 @@ public class PlayerInputHandler : MonoBehaviour
     public bool JumpInput {get; private set;}
     public bool RunInput {get; private set;}
 
+    public bool CollectInput {get; private set;}
+
     [SerializeField]
     private float inputHoldTime = 0.2f;
     private float jumpInputStartTime;
@@ -57,6 +59,19 @@ public class PlayerInputHandler : MonoBehaviour
         if(context.canceled)
         {
             RunInput = false;
+        }
+    }
+
+    public void OnCollectInput(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            CollectInput = true;
+            Debug.Log("collect");
+        }
+        if(context.canceled)
+        {
+            CollectInput = false;
         }
     }
 

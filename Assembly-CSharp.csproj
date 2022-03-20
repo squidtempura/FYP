@@ -50,6 +50,7 @@
      <Compile Include="Assets\script\bullet2.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerCrouchMoveState.cs" />
      <Compile Include="Assets\script\PlayerHealth.cs" />
+     <Compile Include="Assets\script\UI\OptionScreen.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleController_UsingActionAsset.cs" />
      <Compile Include="Assets\script\EnemyBehaviour.cs" />
      <Compile Include="Assets\script\HealthBar.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\script\player\input\PlayerInputHandler.cs" />
      <Compile Include="Assets\script\MovingPlatform1.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerJumpState.cs" />
+     <Compile Include="Assets\script\UI\MenuController.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleController_UsingPlayerInput.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SuperState\PlayerGroundedState.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SuperState\PlayerAbilityState.cs" />
@@ -69,6 +71,7 @@
      <Compile Include="Assets\script\Coin.cs" />
      <Compile Include="Assets\script\bullet.cs" />
      <Compile Include="Assets\script\GunPickUp.cs" />
+     <Compile Include="Assets\script\UI\MainMenu.cs" />
      <Compile Include="Assets\script\CameraFollow.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerInLandState.cs" />
      <Compile Include="Assets\script\player\PlayerFiniteStateMachine\PlayerState.cs" />
@@ -76,9 +79,9 @@
      <Compile Include="Assets\script\player\Data\PlayerData.cs" />
      <Compile Include="Assets\script\PickUp.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerInAirState.cs" />
-     <Compile Include="Assets\script\UI\MainMenu.cs" />
-     <Compile Include="Assets\script\UI\OptionScreen.cs" />
-     <Compile Include="Assets\script\UI\MenuController.cs" />
+     <Compile Include="Assets\script\player\interaction\InteractionSystem.cs" />
+     <Compile Include="Assets\script\player\interaction\Item.cs" />
+     <Compile Include="Assets\script\player\interaction\InventorySystem.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\_GamesPlusJames Menu Assets\Font\About.txt" />
