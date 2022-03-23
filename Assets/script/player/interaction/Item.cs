@@ -12,10 +12,17 @@ public class Item : MonoBehaviour
     public KeyCode collectkey;
     
     public string item_description;
+
+    public Text pickUpText;
+
+    private void Start()
+    {
+        pickUpText.gameObject.SetActive(false);
+    }
     private void Reset()
     {
         GetComponent<Collider2D>().isTrigger = true;
-        gameObject.layer = 10;
+        gameObject.layer = 14;
     }
 
     public void Interact()
@@ -36,6 +43,21 @@ public class Item : MonoBehaviour
             default:
                 Debug.Log("null");
                 break;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+           pickUpText.gameObject.SetActive(true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Player"))
+        {
+           pickUpText.gameObject.SetActive(false);
         }
     }
 }

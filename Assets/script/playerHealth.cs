@@ -35,6 +35,18 @@ public class PlayerHealth : MonoBehaviour
         StartCoroutine(ShowPlayerHitBox());
     }
 
+    public void HealPlayer(int heal)
+    {
+        health += heal;
+        HealthBar.HealthCurrent = health;
+        if(health == 5)
+        {
+            health = 5;
+        }
+        HealthBar.HealthCurrent = health;
+        StartCoroutine(ShowPlayerHitBox());
+    }
+
     IEnumerator ShowPlayerHitBox()
     {
         yield return new WaitForSeconds(hitBoxCdTime);
