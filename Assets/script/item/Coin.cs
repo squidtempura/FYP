@@ -23,5 +23,10 @@ public class Coin : MonoBehaviour
             CoinUI.CurrentCoinNum += 1;
             Destroy(gameObject);
         }
+        if(other.gameObject.CompareTag("Player") && other.GetType().ToString() == "UnityEngine.CircleCollider2D")
+        {
+            CoinUI.CurrentCoinNum += 1;
+            Destroy(gameObject);
+        }
     }
 }

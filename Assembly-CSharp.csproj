@@ -36,12 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\script\CrawlSpike.cs" />
+     <Compile Include="Assets\script\trap\CrawlSpike.cs" />
+     <Compile Include="Assets\script\PickUpDeathPotion.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleControls.cs" />
      <Compile Include="Assets\script\Enemy\GreenSlime.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleController_UsingActions.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerMoveState.cs" />
-     <Compile Include="Assets\script\playercontroller.cs" />
      <Compile Include="Assets\script\player\PlayerFiniteStateMachine\Player.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerIdleState.cs" />
      <Compile Include="Assets\script\player\interaction\InteractionSystem.cs" />
@@ -49,13 +49,15 @@
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerRunState.cs" />
      <Compile Include="Assets\script\Enemy\EnemyFiniteStateMachine\idleState.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerCrouchIdleState.cs" />
+     <Compile Include="Assets\script\FlyEnemy.cs" />
      <Compile Include="Assets\script\Gun.cs" />
+     <Compile Include="Assets\script\trap\Crusher.cs" />
      <Compile Include="Assets\script\item\bullet2.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerCrouchMoveState.cs" />
+     <Compile Include="Assets\script\terrain\CheckPoint.cs" />
      <Compile Include="Assets\script\PlayerHealth.cs" />
      <Compile Include="Assets\script\UI\OptionScreen.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleController_UsingActionAsset.cs" />
-     <Compile Include="Assets\script\Enemy\EnemyBehaviour.cs" />
      <Compile Include="Assets\script\UI\HealthBar.cs" />
      <Compile Include="Assets\script\player\PlayerFiniteStateMachine\PlayerStateMachine.cs" />
      <Compile Include="Assets\script\trap\Spike.cs" />
@@ -69,27 +71,30 @@
      <Compile Include="Assets\script\Enemy\turret\turretbullet.cs" />
      <Compile Include="Assets\script\Enemy\turret\turret.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleController_UsingPlayerInput.cs" />
+     <Compile Include="Assets\script\Enemy.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SuperState\PlayerGroundedState.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SuperState\PlayerAbilityState.cs" />
      <Compile Include="Assets\script\GameManager.cs" />
      <Compile Include="Assets\script\UI\CoinUI.cs" />
      <Compile Include="Assets\script\player\interaction\Inventory.cs" />
-     <Compile Include="Assets\script\MovingPlatform2.cs" />
+     <Compile Include="Assets\script\terrain\MovingPlatform2.cs" />
      <Compile Include="Assets\script\item\Coin.cs" />
      <Compile Include="Assets\script\item\bullet.cs" />
-     <Compile Include="Assets\script\DestructiblePlatform.cs" />
+     <Compile Include="Assets\script\terrain\DestructiblePlatform.cs" />
      <Compile Include="Assets\script\player\interaction\Item.cs" />
      <Compile Include="Assets\script\player\pickup\GunPickUp.cs" />
      <Compile Include="Assets\script\UI\MainMenu.cs" />
      <Compile Include="Assets\script\CameraFollow.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerInLandState.cs" />
+     <Compile Include="Assets\script\PlayerRespawn.cs" />
      <Compile Include="Assets\script\player\PlayerFiniteStateMachine\PlayerState.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleController_UsingState.cs" />
      <Compile Include="Assets\script\player\Data\PlayerData.cs" />
-     <Compile Include="Assets\script\PickUp.cs" />
+     <Compile Include="Assets\script\SaveManager.cs" />
+     <Compile Include="Assets\script\PickUpHealthPotion.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerInAirState.cs" />
      <Compile Include="Assets\script\Enemy\EnemyFiniteStateMachine\IState.cs" />
-     <Compile Include="Assets\script\Crusher.cs" />
+     <Compile Include="Assets\script\ScreenFlash.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\_GamesPlusJames Menu Assets\Font\About.txt" />

@@ -8,6 +8,9 @@ TagManager:
   - Detection
   - item
   - Gun
+  - GM
+  - HealthBar
+  - HealthPotion
   layers:
   - Default
   - TransparentFX

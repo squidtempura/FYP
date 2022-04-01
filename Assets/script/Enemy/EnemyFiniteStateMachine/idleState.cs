@@ -128,7 +128,7 @@ public class ChaseState : IState
         
         if(parameter.target)
         {
-            manager.transform.position = Vector2.MoveTowards(manager.transform.position,parameter.target.position, parameter.chaseSpeed * Time.deltaTime);
+            manager.transform.position = Vector2.MoveTowards(manager.transform.position,new Vector2(parameter.target.position.x, manager.transform.position.y), parameter.chaseSpeed * Time.deltaTime);
         }
         if(parameter.target == null || manager.transform.position.x < parameter.chasePoints[0].position.x || manager.transform.position.x > parameter.chasePoints[1].position.x)
         {

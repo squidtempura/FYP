@@ -2,31 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreenSlime : MonoBehaviour
+public class GreenSlime : Enemy
 {
-    public int health;
-    public int damage;
     private PlayerHealth playerHealth;
-    public GameObject dropCoin;    
+       
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if(health <= 0)
-        {
-            Instantiate(dropCoin, transform.position,Quaternion.identity);
-            Destroy(gameObject);
-        }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
+        base.Update();
     }
 
     void OnTriggerEnter2D(Collider2D other) 

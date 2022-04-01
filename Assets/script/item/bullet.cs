@@ -32,15 +32,16 @@ public class bullet : MonoBehaviour
 
     
     void OnTriggerEnter2D(Collider2D other)
+    {
+        //if bullet is touching enemy
+        if(other.gameObject.CompareTag("Enemy"))
         {
-            //if bullet is touching enemy
-            if(other.gameObject.CompareTag("Enemy"))
-            {
-                //destroy bullet object
-                Destroy(gameObject); 
-                //bullet causes damage to enemy
-                //other.GetComponent<Enemy>().TakeDamage(damage);
-                other.GetComponent<GreenSlime>().TakeDamage(damage);
-            }
+            //destroy bullet object
+            Destroy(gameObject); 
+            //bullet causes damage to enemy
+            other.GetComponent<Enemy>().TakeDamage(damage);
+            //other.GetComponent<GreenSlime>().TakeDamage(damage);  
         }
+        
+    }
 }
