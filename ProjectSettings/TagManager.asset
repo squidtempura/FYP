@@ -11,6 +11,7 @@ TagManager:
   - GM
   - HealthBar
   - HealthPotion
+  - Ground
   layers:
   - Default
   - TransparentFX

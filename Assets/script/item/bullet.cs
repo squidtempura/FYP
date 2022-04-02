@@ -42,6 +42,10 @@ public class bullet : MonoBehaviour
             other.GetComponent<Enemy>().TakeDamage(damage);
             //other.GetComponent<GreenSlime>().TakeDamage(damage);  
         }
-        
+     
+        //if(other.gameObject.CompareTag("Ground"))
+        //{
+        //    Destroy(gameObject);
+        //}
     }
 }
