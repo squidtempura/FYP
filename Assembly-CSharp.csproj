@@ -50,14 +50,17 @@
      <Compile Include="Assets\script\Enemy\EnemyFiniteStateMachine\idleState.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerCrouchIdleState.cs" />
      <Compile Include="Assets\script\Enemy\FlyEnemy.cs" />
+     <Compile Include="Assets\script\FireUfoBulletMode2.cs" />
      <Compile Include="Assets\script\Gun.cs" />
      <Compile Include="Assets\script\trap\Crusher.cs" />
      <Compile Include="Assets\script\item\bullet2.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerCrouchMoveState.cs" />
      <Compile Include="Assets\script\terrain\CheckPoint.cs" />
      <Compile Include="Assets\script\PlayerHealth.cs" />
+     <Compile Include="Assets\script\UFObullet.cs" />
      <Compile Include="Assets\script\UI\OptionScreen.cs" />
      <Compile Include="Assets\Samples\Input System\1.0.2\Simple Demo\SimpleController_UsingActionAsset.cs" />
+     <Compile Include="Assets\script\FireUfoBullet.cs" />
      <Compile Include="Assets\script\UI\HealthBar.cs" />
      <Compile Include="Assets\script\player\PlayerFiniteStateMachine\PlayerStateMachine.cs" />
      <Compile Include="Assets\script\trap\Spike.cs" />
@@ -80,7 +83,9 @@
      <Compile Include="Assets\script\terrain\MovingPlatform2.cs" />
      <Compile Include="Assets\script\item\Coin.cs" />
      <Compile Include="Assets\script\item\bullet.cs" />
+     <Compile Include="Assets\script\Boss.cs" />
      <Compile Include="Assets\script\terrain\DestructiblePlatform.cs" />
+     <Compile Include="Assets\script\BulletPool.cs" />
      <Compile Include="Assets\script\ScreenFlash.cs" />
      <Compile Include="Assets\script\player\interaction\Item.cs" />
      <Compile Include="Assets\script\player\pickup\GunPickUp.cs" />
@@ -93,14 +98,9 @@
      <Compile Include="Assets\script\player\Data\PlayerData.cs" />
      <Compile Include="Assets\script\SaveManager.cs" />
      <Compile Include="Assets\script\PickUpHealthPotion.cs" />
+     <Compile Include="Assets\script\UFOmovement.cs" />
      <Compile Include="Assets\script\player\PlayerStates\SubState\PlayerInAirState.cs" />
      <Compile Include="Assets\script\Enemy\EnemyFiniteStateMachine\IState.cs" />
-     <Compile Include="Assets\script\UFOmovement.cs" />
-     <Compile Include="Assets\script\UFObullet.cs" />
-     <Compile Include="Assets\script\BulletPool.cs" />
-     <Compile Include="Assets\script\FireUfoBullet.cs" />
-     <Compile Include="Assets\script\FireUfoBulletMode2.cs" />
-     <Compile Include="Assets\script\Boss.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\_GamesPlusJames Menu Assets\Font\About.txt" />
@@ -349,7 +349,7 @@
         <HintPath>D:/UNITY/2020.3.14f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>D:/DT228/FYP/1/FYP/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>D:/DT228/FYP/New folder/FYP/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>D:/UNITY/2020.3.14f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -697,16 +697,16 @@
         <HintPath>D:/UNITY/2020.3.14f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-        <HintPath>D:/DT228/FYP/1/FYP/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+        <HintPath>D:/DT228/FYP/New folder/FYP/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-        <HintPath>D:/DT228/FYP/1/FYP/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+        <HintPath>D:/DT228/FYP/New folder/FYP/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>D:/DT228/FYP/1/FYP/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>D:/DT228/FYP/New folder/FYP/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>D:/DT228/FYP/1/FYP/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>D:/DT228/FYP/New folder/FYP/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
